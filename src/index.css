@@ -121,6 +121,10 @@ p{
   padding: 15px;
 }
 
+.marg-top-gap{
+  margin-top: 10px;
+}
+
 .btn {
   display: inline-block;
   font-weight: 400;
