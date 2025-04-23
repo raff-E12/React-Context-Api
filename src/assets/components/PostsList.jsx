@@ -1,11 +1,12 @@
 import React from 'react'
 import PostCard from './PostCard'
 
-export default function PostsList() {
+export default function PostsList({listImport}) {
+  console.log(listImport)
   return (
     <>
      <div className="cards">
-     <PostCard />
+     <PostCard list={listImport}/>
     </div>
     </>
   )
