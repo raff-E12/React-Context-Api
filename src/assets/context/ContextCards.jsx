@@ -7,12 +7,13 @@ const ContextImport = createContext();
 function ContextCards({children}) {
 
   const [isList, SetList] = useState([]);
+  const [isCount, setCount] = useState(0);
 
   async function CardsFetchImport(){
-    const url = 'https://dummyjson.com/posts';
+    const url = 'https://dummyjson.com/posts?skip=0&limit=3';
     const fetch = await axios.get(url);
     const data  = fetch.data.posts;
-    // console.log(data);
+    console.log(fetch.data);
     SetList(data);
   }
 

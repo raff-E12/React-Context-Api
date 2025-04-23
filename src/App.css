@@ -62,49 +62,6 @@
   text-align: center;
 }
 
-/* Responsive Breakpoints */
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-  }
-
-  .container{
-    flex-direction: row;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .about .container, .service-items, .services .container, .cards-section .container{
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 10px;
-  }
-
-  .stats{
-    gap: 10px;
-  }
-
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: #333;
-    flex-direction: column;
-    width: 200px;
-    gap: 10px;
-    padding: 10px;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-}
-
 .hero {
   background: linear-gradient(135deg, #00b894, #0984e3);
   color: #fff;
@@ -211,6 +168,7 @@
 .cards {
   display: flex;
   gap: 20px;
+  height: 100vh;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -221,6 +179,7 @@
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 300px;
+  height: 500px;
   overflow: hidden;
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -229,6 +188,7 @@
 .card:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }
 
 .card-image {
@@ -265,6 +225,69 @@
 
 .card-button:hover {
   background: #0984e3;
+}
+
+.logo-sc{
+  display: flex;
+  width: 40%;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.logo-box-icon{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .container{
+    flex-direction: row;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .about .container, .service-items, .services .container, .cards-section .container{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .stats{
+    gap: 10px;
+  }
+
+  .cards{
+    height: auto;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #333;
+    flex-direction: column;
+    width: 200px;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
 }
 
 /***** End Style Page *****/

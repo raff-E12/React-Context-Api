@@ -13,7 +13,7 @@ export default function PostCard({list}) {
       <div className="card" key={index}>
         <img src={DummyImgs} alt="Placeholder" className="card-image"/>
         <h3 className="card-title">{items.title}</h3>
-        <p className="card-description"><b>Price:</b>{items.body}</p>
+        <p className="card-description">{String(items.body).slice(0, 90)}...</p>
         <button className="card-button">Learn More</button>
       </div>
         </>
