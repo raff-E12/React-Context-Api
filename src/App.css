@@ -58,6 +58,10 @@
   text-decoration: none;
 }
 
+.services .container{
+  text-align: center;
+}
+
 /* Responsive Breakpoints */
 @media (max-width: 768px) {
   .hamburger {

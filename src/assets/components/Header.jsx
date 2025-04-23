@@ -19,11 +19,11 @@ export default function Header() {
           <span></span>
         </button>
         <ul className={`nav-links ${isOpen ? "show" : ""}`}>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><p>Home</p></li>
+          <li><p>About</p></li>
+          <li><p>Services</p></li>
+          <li><p>Projects</p></li>
+          <li><p>Contact</p></li>
         </ul>
       </nav>
     </div>
