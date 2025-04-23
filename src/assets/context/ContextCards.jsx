@@ -3,6 +3,7 @@ import axios from 'axios';
 
 const ContextImport = createContext();
 
+// UseContext Basato sul wrap dei contenuti in maniera dinamica
 function ContextCards({children}) {
 
   const [isList, SetList] = useState([]);
@@ -29,6 +30,7 @@ function ContextCards({children}) {
   )
 }
 
+//Uso del Contesto in modo Omogeneo
 function useContextItems(){
   const context_import = useContext(ContextImport);
   return context_import
