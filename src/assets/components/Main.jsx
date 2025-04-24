@@ -6,11 +6,11 @@ export default function Main() {
     <> 
   <section className="hero">
       <div className="hero-content">
-        <h2 className="hero-title">Benvenuto nella Pagina!!</h2>
-        <p className="hero-description">Questa è una descrizione di esempio per introdurre la tua pagina.</p>
+        <h2 className="hero-title">Welcome to the Page!!</h2>
+        <p className="hero-description">This is a sample description.</p>
         <div className="hero-buttons">
-          <Link to={"/credits"} className='cta-button'>Scopri di più</Link>
-          <Link to={"/posts"} className='cta-button secondary'>Scopri i nostri Post</Link>
+          <Link to={"/credits"} className='cta-button'>Find out more</Link>
+          <Link to={"/posts"} className='cta-button secondary'>Discover our Posts</Link>
         </div>
       </div>
   </section>
