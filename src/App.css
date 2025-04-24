@@ -8,6 +8,12 @@
   padding: 0 20px;
 }
 
+.loading-sc{
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .main-sc{
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -168,9 +174,13 @@
 .cards {
   display: flex;
   gap: 20px;
-  height: 100vh;
+  height: auto;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.cards.empty{
+  height: 100vh;
 }
 
 .card {
@@ -183,6 +193,10 @@
   overflow: hidden;
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card.fade{
+  animation: fade-in 1s ease-in-out;
 }
 
 .card:hover {
@@ -221,6 +235,14 @@
   cursor: pointer;
   font-size: 1rem;
   transition: background 0.3s ease;
+}
+
+.container.btns-containers{
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .card-button:hover {
@@ -269,10 +291,6 @@
     gap: 10px;
   }
 
-  .cards{
-    height: auto;
-  }
-
   .nav-links {
     display: none;
     position: absolute;
@@ -283,6 +301,10 @@
     width: 200px;
     gap: 10px;
     padding: 10px;
+  }
+
+  .logo{
+    display: none;
   }
 
   .nav-links.show {

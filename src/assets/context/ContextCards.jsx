@@ -8,20 +8,45 @@ function ContextCards({children}) {
 
   const [isList, SetList] = useState([]);
   const [isCount, setCount] = useState(0);
+  const [isAnimation, setAnimation] = useState(false);
 
   async function CardsFetchImport(){
-    const url = 'https://dummyjson.com/posts?skip=0&limit=3';
+    const url = `https://dummyjson.com/posts?skip=${isCount}&limit=3`;
     const fetch = await axios.get(url);
     const data  = fetch.data.posts;
     console.log(fetch.data);
     SetList(data);
   }
 
-  useEffect(() =>{ CardsFetchImport() },[]);
+  function handleIncrementCount() {
+    if (isCount < 5) {
+      setAnimation(true);
+      return setCount(value => value + 1);
+    }
+  }
+
+  function handleDecrementCount() {
+    if (isCount > 0) {
+      setAnimation(true);
+      return setCount(value => value - 1);
+    }
+  }
+
+  useEffect(() =>{ 
+    setTimeout(() =>{
+      CardsFetchImport()
+      setAnimation(true);
+    }, 1000)
+  setAnimation(false);
+  },[isCount]);
 
   const values_export = { 
     isList, 
-    SetList
+    SetList,
+    handleDecrementCount,
+    handleIncrementCount,
+    isCount,
+    isAnimation
   }
 
   return (
@@ -31,7 +56,7 @@ function ContextCards({children}) {
   )
 }
 
-//Uso del Contesto in modo Omogeneo
+//Uso del Contesto in modo Esteso senza il bisogno della "useContext""
 function useContextItems(){
   const context_import = useContext(ContextImport);
   return context_import
