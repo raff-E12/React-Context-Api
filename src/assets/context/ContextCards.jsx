@@ -36,7 +36,7 @@ function ContextCards({children}) {
     setTimeout(() =>{
       CardsFetchImport()
       setAnimation(true);
-    }, 1000)
+    }, 80)
   setAnimation(false);
   },[isCount]);
 
